@@ -28,12 +28,15 @@
 
 **Under construction**
 
+&#xa0;
+
 ## :rocket: Let's start ##
 
 ```bash
 # Coming soon ....
 $
 ```
+&#xa0;
 
 ## :white_check_mark: Technologies ##
 
@@ -45,9 +48,13 @@ The following tools have been used or are required for this project:
 - [Joomla!](https://www.joomla.org/)[^1] - [Github](https://github.com/joomla/joomla-cms/) \
 **Joomla!** is a free and open-source content management system (CMS) for publishing web content and building powerful online applications.
 
+&#xa0;
+
 ## :memo: License ##
 
 This project is under GNU General Public License version 3 or later;. For more details, see the [LICENSE](LICENSE.md) file.
+
+&#xa0;
 
 ## :sparkles: Your support ##
 
@@ -59,9 +66,8 @@ Would you like to support me and my future developments?!? 🎉 🚀 Thank you !
 
 &#xa0;
 
+<a href="#top">Back to top&nbsp;&nbsp;⬆️</a>
+
 [^1]: This project is not affiliated with or endorsed by The Joomla! Project™. Any products and services provided through this site are not supported or warrantied by The Joomla! Project or Open Source Matters, Inc. Use of the Joomla!® name, symbol, logo and related trademarks is permitted under a limited license granted by Open Source Matters, Inc.
 
-&#xa0;
 
-
-<a href="#top">Back to top&nbsp;&nbsp;⬆️</a>
