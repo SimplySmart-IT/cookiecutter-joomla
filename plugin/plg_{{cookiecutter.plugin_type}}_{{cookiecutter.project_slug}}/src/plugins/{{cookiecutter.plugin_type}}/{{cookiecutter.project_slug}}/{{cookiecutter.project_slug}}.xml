@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="{{cookiecutter.plugin_type}}" method="upgrade">
+	<name>plg_{{cookiecutter.plugin_type}}_{{cookiecutter.project_slug}}</name>
+	<version>{{cookiecutter.version}}</version>
+	<creationDate>{{cookiecutter.creation_date}}</creationDate>
+	<author>{{cookiecutter.author}}</author>
+	<authorEmail>{{cookiecutter.author_email}}</authorEmail>
+	<authorUrl>{{cookiecutter.author_url}}</authorUrl>
+	<copyright>(C) {{cookiecutter.copyright_year}}, {{cookiecutter.author_full}}</copyright>
+	<description>PLG_{{cookiecutter.plugin_type.upper()}}_{{cookiecutter.project_slug.upper()}}_XML_DESCRIPTION</description>
+	<namespace path="src">{{cookiecutter.namespace}}\Plugin\{{cookiecutter.plugin_type.title()}}\{{cookiecutter.project_slug.title()}}</namespace>
+	<!-- Scripts to run on installation -->
+	<scriptfile>script.php</scriptfile>
+	<!-- Plugin files -->
+	<files>
+		<folder>forms</folder>
+		<folder>language</folder>
+		<folder plugin="{{cookiecutter.project_slug}}">services</folder>
+		<folder>src</folder>
+		<!-- <folder>tmpl</folder> -->
+	</files>
+	<media destination="media/plg_{{cookiecutter.plugin_type}}_{{cookiecutter.project_slug}}" folder="media">
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>scss</folder>
+		<!-- <folder>images</folder> -->
+	</media>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/plg_{{cookiecutter.plugin_type}}_{{cookiecutter.project_slug}}.ini</language>
+		<language tag="en-GB">en-GB/plg_{{cookiecutter.plugin_type}}_{{cookiecutter.project_slug}}.sys.ini</language>
+		<language tag="de-DE">de-DE/plg_{{cookiecutter.plugin_type}}_{{cookiecutter.project_slug}}.ini</language>
+		<language tag="de-DE">de-DE/plg_{{cookiecutter.plugin_type}}_{{cookiecutter.project_slug}}.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldprefix="{{cookiecutter.namespace}}\Plugin\{{cookiecutter.plugin_type.title()}}\{{cookiecutter.project_slug.title()}}\Field">
+				<!-- media example field -->
+				<!-- <field
+					name="mediaExample"
+					type="media"
+					default=""
+					label="PLG_{{cookiecutter.plugin_type.upper()}}_{{cookiecutter.project_slug.upper()}}_MEDIAEXAMPLE_LABEL"
+				/> -->
+
+				<!-- text example field -->
+				<!-- <field
+					name="textExample"
+					type="text"
+					default=""
+					label="PLG_{{cookiecutter.plugin_type.upper()}}_{{cookiecutter.project_slug.upper()}}_TEXTEXAMPLE_LABEL"
+					filter="string"
+					showon="brand:1"
+				/> -->
+
+				<!-- options example field -->
+				<!-- <field
+					name="optionsExample"
+					type="radio"
+					label="PLG_{{cookiecutter.plugin_type.upper()}}_{{cookiecutter.project_slug.upper()}}_OPTIONSEXAMPLE_LABEL"
+					layout="joomla.form.field.radio.switcher"
+					default="0"
+					filter="options"
+					>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field> -->
+			</fieldset>
+		</fields>
+	</config>
+	<!-- Changelog -->
+	<!-- <changelogurl>https://{{cookiecutter.author_url}}/plg_{{cookiecutter.plugin_type}}_{{cookiecutter.project_slug}}/changelog.xml</changelogurl> -->
+	<!-- Update servers -->
+	<!-- <updateservers>
+		<server type="extension" priority="1" name="Update Site">https://{{cookiecutter.author_url}}/plg_{{cookiecutter.plugin_type}}_{{cookiecutter.project_slug}}/update.xml</server>
+	</updateservers> -->
+</extension>

@@ -1,0 +1,28 @@
+# Node artifact files
+node_modules/
+dist/
+
+# Composer Dev
+vendor
+
+# Log files
+*.log
+
+# Unit test reports
+TEST*.xml
+
+# Applications
+*.app
+*.exe
+*.war
+
+# Archives
+*.zip
+
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv

@@ -1,0 +1,19 @@
+{
+    "author": "Your Full-Name",
+    "author_email": "Your Email",
+    "author_company": "Your Company Name (optional)",
+    "author_full": "{% if cookiecutter.author_company != '' -%}{{ cookiecutter.author_company }} - {% endif -%}{{ cookiecutter.author }}",
+    "author_url": "Your Website Url",
+    "creation_date": "{% now 'utc', '%Y-%m' %}",
+    "copyright_year": "{% now 'utc', '%Y' %}",
+    "plugin_type": ["captcha", "content", "fields", "filesystem", "media-action", "quickicon", "schemaorg", "system", "task", "useer", "webservices", "workflow"],
+    "project_name": "Your Pluginname",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "version": "0.1.0",
+    "short_description": "A short description of your plugin",
+    "namespace": "{% if cookiecutter.author_company != '' -%}{{ cookiecutter.author_company.title().replace(' ', '-').strip() }}{% else -%}{{ cookiecutter.author.title().replace(' ', '-').strip() }}{% endif -%}",
+    "language": "de-DE",
+    "__project_type": "plugin",
+    "__extension_prefix": "plg",
+    "__language_dir": "src/{{ cookiecutter.__project_type }}/{{ cookiecutter.plugin_type }}/{{ cookiecutter.project_slug}}/language"
+}

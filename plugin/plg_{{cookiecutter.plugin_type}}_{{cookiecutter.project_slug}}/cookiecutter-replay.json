@@ -1,0 +1,20 @@
+{
+    "cookiecutter": {
+        "author": "{{ cookiecutter.author }}",
+        "author_email": "{{ cookiecutter.author_email }}",
+        "author_company": "{{ cookiecutter.author_company }}",
+        "author_full": "{{ cookiecutter.author_full }}",
+        "author_url": "{{ cookiecutter.author_url }}",
+        "creation_date": "{{ cookiecutter.creation_date }}",
+        "copyright_year": "{{ cookiecutter.copyright_year }}",
+        "plugin_type":  "{{ cookiecutter.plugin_type }}",
+        "project_name": "{{ cookiecutter.project_name }}",
+        "project_slug": "{{ cookiecutter.project_slug }}",
+        "version": "{{ cookiecutter.version }}",
+        "short_description": "{{ cookiecutter.short_description }}",
+        "namespace": "{{ cookiecutter.namespace }}",
+        "__project_type": "plugin",
+        "__extension_prefix": "plg",
+        "__language_dir": "src/{{ cookiecutter.__project_type }}/{{ cookiecutter.plugin_type }}/{{ cookiecutter.project_slug}}/language"
+    }
+}

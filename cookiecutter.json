@@ -1,0 +1,14 @@
+{
+    "templates": {
+        "plugin": {
+            "path": "./plugin",
+            "title": "Plugin",
+            "description": "A cookiecutter template for a Joomla! plugin"
+        },
+        "module": {
+            "path": "./module",
+            "title": "Module",
+            "description": "A cookiecutter template for a Joomla! module"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+    "name": "plg_{{cookiecutter.plugin_type}}_{{cookiecutter.project_slug}}",
+    "version": "{{cookiecutter.version}}",
+    "description": "This file contains details of the assets used by {{cookiecutter.plugin_type}} plugin {{cookiecutter.project_slug}}.",
+    "license": "GPL-3.0-or-later",
+    "assets": [
+      {
+        "name": "plg_{{cookiecutter.plugin_type}}_{{cookiecutter.project_slug}}",
+        "type": "style",
+        "uri": "plg_{{cookiecutter.plugin_type}}_{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.min.css"
+      },
+      {
+        "name": "plg_{{cookiecutter.plugin_type}}_{{cookiecutter.project_slug}}",
+        "type": "script",
+        "uri": "{{cookiecutter.project_slug}}",
+        "attributes" : {
+          "type": "module"
+        },
+        "dependencies": [
+          "core"
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,12 @@
+; {{cookiecutter.namespace}} - Plugin - {{cookiecutter.project_slug.title()}}
+; (C) {{cookiecutter.copyright_year}}, {{cookiecutter.author_full}} <{{cookiecutter.author_url}}>
+; @license    GNU General Public License version 3 or later; see LICENSE
+; Note : All ini files need to be saved as UTF-8
+
+{%- if cookiecutter.__project_type == 'plugin' %}
+PLG_{{cookiecutter.plugin_type.upper()}}_{{cookiecutter.project_slug.upper()}}="{{ cookiecutter.plugin_type.title() }} - {{cookiecutter.namespace}} {{cookiecutter.project_slug.title()}}"
+PLG_{{cookiecutter.plugin_type.upper()}}_{{cookiecutter.project_slug.upper()}}_XML_DESCRIPTION="<p>This Plugin ...</p>"
+{%- else %}
+{{ cookiecutter.__extension_prefix.upper() }}_{{cookiecutter.project_slug.upper()}}="{{cookiecutter.project_name}}"
+{{ cookiecutter.__extension_prefix.upper() }}_{{cookiecutter.project_slug.upper()}}_XML_DESCRIPTION="<p>This {{cookiecutter.__project_type.title()}} ...
+{%- endif %}
