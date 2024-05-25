@@ -1,0 +1,20 @@
+{
+  "name": "mod_{{cookiecutter.project_slug}}",
+  "description": "Module {{cookiecutter.project_slug.title()}} for Joomla",
+  "version": "{{cookiecutter.version}}",
+  "homepage": "{{cookiecutter.author_url}}",
+  "copyright": "(C) {{cookiecutter.copyright_year}}, {{cookiecutter.author_full}} <{{cookiecutter.author_url}}>. All rights reserved.",
+  "devDependencies": {
+    "eslint": "^8.51.0",
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard": "*",
+    "stylelint-config-standard-scss": "*",
+    "stylelint-config-twbs-bootstrap": "^14.0.0"
+  },
+  "scripts": {
+    "eslint:check": "eslint --no-error-on-unmatched-pattern --config .eslintrc.js --ext .js ./",
+    "eslint:fix": "eslint --no-error-on-unmatched-pattern --fix --config .eslintrc.js --ext .js ./",
+    "stylelint:check": "stylelint \"**/*.scss\" --allow-empty-input --formatter verbose",
+    "stylelint:fix": "stylelint \"**/*.scss\" --allow-empty-input --formatter verbose --fix"
+  }
+}

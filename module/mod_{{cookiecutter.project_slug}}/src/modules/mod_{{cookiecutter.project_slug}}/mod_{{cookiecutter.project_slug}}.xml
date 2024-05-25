@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" client="site" method="upgrade">
+	<name>mod_{{cookiecutter.project_slug}}</name>
+	<version>{{cookiecutter.version}}</version>
+	<creationDate>{{cookiecutter.creation_date}}</creationDate>
+	<author>{{cookiecutter.author}}</author>
+	<authorEmail>{{cookiecutter.author_email}}</authorEmail>
+	<authorUrl>{{cookiecutter.author_url}}</authorUrl>
+	<copyright>(C) {{cookiecutter.copyright_year}}, {{cookiecutter.author_full}}</copyright>
+	<description>MOD_{{cookiecutter.project_slug.upper()}}_XML_DESCRIPTION</description>
+	<namespace path="src">{{cookiecutter.namespace}}\Module\{{cookiecutter.__project_camelcaps}}</namespace>
+	<!-- Scripts to run on installation -->
+	<!-- <scriptfile>script.php</scriptfile> -->
+	<!-- Plugin files -->
+	<files>
+		<folder>language</folder>
+		<folder module="mod_{{cookiecutter.project_slug}}">services</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+	</files>
+	<media destination="media/mod_{{cookiecutter.project_slug}}" folder="media">
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>scss</folder>
+		<!-- <folder>images</folder> -->
+	</media>
+	<!-- <languages folder="language"> -->
+		<!-- <language tag="en-GB">en-GB/mod_{{cookiecutter.project_slug}}.ini</language> -->
+		<!-- <language tag="en-GB">en-GB/mod_{{cookiecutter.project_slug}}.sys.ini</language> -->
+	<!-- </languages> -->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                <field
+					name="count"
+					type="number"
+					label="MOD_{{cookiecutter.project_slug.upper()}}_FIELD_COUNT_LABEL"
+					default="10"
+					filter="integer"
+					min="1"
+					validate="number"
+				/>
+				<!-- media example field -->
+				<!-- <field
+					name="mediaExample"
+					type="media"
+					default=""
+					label="MOD_{{cookiecutter.project_slug.upper()}}_MEDIAEXAMPLE_LABEL"
+				/> -->
+
+				<!-- text example field -->
+				<!-- <field
+					name="textExample"
+					type="text"
+					default=""
+					label="MOD_{{cookiecutter.project_slug.upper()}}_TEXTEXAMPLE_LABEL"
+					filter="string"
+					showon="brand:1"
+				/> -->
+
+				<!-- options example field -->
+				<!-- <field
+					name="optionsExample"
+					type="radio"
+					label="MOD_{{cookiecutter.project_slug.upper()}}_OPTIONSEXAMPLE_LABEL"
+					layout="joomla.form.field.radio.switcher"
+					default="0"
+					filter="options"
+					>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field> -->
+			</fieldset>
+            
+            <fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					class="form-select"
+					validate="moduleLayout"
+				/>
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					rows="3"
+					validate="CssIdentifier"
+				/>
+
+				<field
+					name="cache"
+					type="list"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					default="1"
+					filter="integer"
+					validate="options"
+					>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="number"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					default="900"
+					filter="integer"
+				/>
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static"
+					>
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<!-- Changelog -->
+	<!-- <changelogurl>https://{{cookiecutter.author_url}}/mod_{{cookiecutter.project_slug}}/changelog.xml</changelogurl> -->
+	<!-- Update servers -->
+	<!-- <updateservers>
+		<server type="extension" priority="1" name="Update Site">https://{{cookiecutter.author_url}}/mod_{{cookiecutter.project_slug}}/update.xml</server>
+	</updateservers> -->
+</extension>

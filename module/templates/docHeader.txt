@@ -1,0 +1,7 @@
+/**
+ * @package      {{cookiecutter.namespace}}.Site
+ * @subpackage   mod_{{cookiecutter.project_slug.title()}}
+ *
+ * @copyright    (C) {{cookiecutter.copyright_year}}, {{cookiecutter.author_full}} <{{cookiecutter.author_url}}>
+ * @license      GNU General Public License version 3 or later; see LICENSE
+ */
