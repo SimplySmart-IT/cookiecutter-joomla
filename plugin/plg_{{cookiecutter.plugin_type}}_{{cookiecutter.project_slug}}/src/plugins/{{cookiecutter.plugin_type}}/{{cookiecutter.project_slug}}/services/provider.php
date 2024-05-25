@@ -10,7 +10,7 @@
  use Joomla\DI\Container;
  use Joomla\DI\ServiceProviderInterface;
  use Joomla\Event\DispatcherInterface;
- use {{cookiecutter.namespace}}\Plugin\{{cookiecutter.plugin_type.title()}}\{{cookiecutter.project_slug.title()}}\Extension\{{cookiecutter.project_slug.title()}};
+ use {{cookiecutter.namespace}}\Plugin\{{cookiecutter.plugin_type.title()}}\{{cookiecutter.project_slug.title()}}\Extension\{{cookiecutter.__project_camelcaps}};
 
  return new class () implements ServiceProviderInterface {
     /**
