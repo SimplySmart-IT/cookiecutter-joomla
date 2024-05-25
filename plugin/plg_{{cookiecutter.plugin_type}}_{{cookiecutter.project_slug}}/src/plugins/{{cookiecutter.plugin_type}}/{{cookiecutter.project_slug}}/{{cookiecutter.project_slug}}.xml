@@ -8,12 +8,12 @@
 	<authorUrl>{{cookiecutter.author_url}}</authorUrl>
 	<copyright>(C) {{cookiecutter.copyright_year}}, {{cookiecutter.author_full}}</copyright>
 	<description>PLG_{{cookiecutter.plugin_type.upper()}}_{{cookiecutter.project_slug.upper()}}_XML_DESCRIPTION</description>
-	<namespace path="src">{{cookiecutter.namespace}}\Plugin\{{cookiecutter.plugin_type.title()}}\{{cookiecutter.project_slug.title()}}</namespace>
+	<namespace path="src">{{cookiecutter.namespace}}\Plugin\{{cookiecutter.plugin_type.title()}}\{{cookiecutter.__project_camelcaps}}</namespace>
 	<!-- Scripts to run on installation -->
-	<scriptfile>script.php</scriptfile>
+	<!-- <scriptfile>script.php</scriptfile> -->
 	<!-- Plugin files -->
 	<files>
-		<folder>forms</folder>
+		<!-- <folder>forms</folder> -->
 		<folder>language</folder>
 		<folder plugin="{{cookiecutter.project_slug}}">services</folder>
 		<folder>src</folder>
@@ -33,7 +33,7 @@
 	</languages>
 	<config>
 		<fields name="params">
-			<fieldset name="basic" addfieldprefix="{{cookiecutter.namespace}}\Plugin\{{cookiecutter.plugin_type.title()}}\{{cookiecutter.project_slug.title()}}\Field">
+			<fieldset name="basic" addfieldprefix="{{cookiecutter.namespace}}\Plugin\{{cookiecutter.plugin_type.title()}}\{{cookiecutter.__project_camelcaps}}\Field">
 				<!-- media example field -->
 				<!-- <field
 					name="mediaExample"

@@ -1,6 +1,6 @@
 /**
  * @package    {{cookiecutter.namespace}}.Plugin
- * @subpackage {{cookiecutter.plugin_type.title()}}.{{cookiecutter.project_slug.title()}}
+ * @subpackage {{cookiecutter.plugin_type.title()}}.{{cookiecutter.project_slug}}
  *
  * @copyright  (C) {{cookiecutter.copyright_year}}, {{cookiecutter.author_full}} <{{cookiecutter.author_url}}>
  * @license    GNU General Public License version 3 or later; see LICENSE

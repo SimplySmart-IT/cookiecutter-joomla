@@ -19,7 +19,7 @@ use Joomla\Event\SubscriberInterface;
  *
  * @since  __DEPLOY_VERSION__
  */
-final class {{cookiecutter.project_slug.title()}} extends CMSPlugin implements SubscriberInterface
+final class {{cookiecutter.__project_camelcaps}} extends CMSPlugin implements SubscriberInterface
 {
     use DatabaseAwareTrait;
 
