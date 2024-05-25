@@ -7,12 +7,27 @@
     "creation_date": "{% now 'utc', '%Y-%m' %}",
     "copyright_year": "{% now 'utc', '%Y' %}",
     "plugin_type": ["captcha", "content", "fields", "filesystem", "media-action", "quickicon", "schemaorg", "system", "task", "useer", "webservices", "workflow"],
-    "project_name": "Your Pluginname",
-    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "project_name": "Example Plugin",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('.', '').replace('-', '_') }}",
     "version": "0.1.0",
-    "short_description": "A short description of your plugin",
+    "short_description": "This Plugin ...",
     "namespace": "{% if cookiecutter.author_company != '' -%}{{ cookiecutter.author_company.title().replace(' ', '-').strip() }}{% else -%}{{ cookiecutter.author.title().replace(' ', '-').strip() }}{% endif -%}",
-    "__project_type": "",
-    "__language_prefix": "",
-    "__language_dir": ""
+    "__project_type": "plugins",
+    "__extension_prefix": "plg",
+    "__language_dir": "",
+    "__language_file": "",
+    "__prompts__": {
+        "author": "Your Full-Name",
+        "author_email": "Your Email",
+        "author_company": "Your Company Name (optional)",
+        "author_full": "Generated Author Full-Name",
+        "author_url": "Your Website Url",
+        "creation_date": "Creation Date",
+        "copyright_year": "Copyright Year",
+        "project_name": "Your Plugin Name",
+        "project_slug": "Generated Plugin Slug",
+        "version": "Version",
+        "short_description": "A short description of your plugin",
+        "namespace": "Generated Namespace"
+    }
 }
