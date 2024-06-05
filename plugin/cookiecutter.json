@@ -13,7 +13,7 @@
     "version": "0.1.0",
     "short_description": "This Plugin ...",
     "namespace": "{% if cookiecutter.author_company != '' -%}{{ cookiecutter.author_company.replace('_', '-').replace(' ', '-').strip().split('-')|map('capitalize')|join }}{% else -%}{{ cookiecutter.author.title().replace('_', '-').replace(' ', '-').strip().split('-')|map('capitalize')|join }}{% endif -%}",
-    "__project_type": "plugins",
+    "__project_type": "plugin",
     "__extension_prefix": "plg",
     "__language_dir": "",
     "__language_file": "",

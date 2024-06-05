@@ -12,9 +12,9 @@
     "short_description": "A short description of your project",
     "namespace": "{% if cookiecutter.author_company != '' -%}{{ cookiecutter.author_company.replace('_', '-').replace(' ', '-').strip().split('-')|map('capitalize')|join }}{% else -%}{{ cookiecutter.author.title().replace('_', '-').replace(' ', '-').strip().split('-')|map('capitalize')|join }}{% endif -%}",
     "language": "de-DE",
-    "__project_type": "plugins",
+    "__project_type": "plugin",
     "__extension_prefix": "plg",
-    "__language_dir": "src/{{ cookiecutter.__project_type }}/{{ cookiecutter.plugin_type }}/{{ cookiecutter.project_slug}}/language",
+    "__language_dir": "src/{{ cookiecutter.__project_type }}s/{{ cookiecutter.plugin_type }}/{{ cookiecutter.project_slug}}/language",
     "__language_file": "{{cookiecutter.__extension_prefix}}_{{cookiecutter.plugin_type}}_{{cookiecutter.project_slug}}",
     "__prompts__": {
         "author": "Your Full-Name",
