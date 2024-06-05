@@ -62,7 +62,7 @@ Made with :heart: by <a href="https://github.com/SimplySmart-IT" target="_blank"
 
 Would you like to support me and my future developments?!? 🎉 🚀 Thank you !!! 💚
 
-[<img alt="paypal.me/simplysmartit" src="https://img.shields.io/static/v1?label=PayPal.me/SimplySmartIT&message=PayPal.me&color=1040c1&style=for-the-badge&logo=paypal"/>](https://paypal.me/simplysmartit?country.x=DE&locale.x=de_DE)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M3YITWC)
 
 &#xa0;
 
