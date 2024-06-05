@@ -10,6 +10,7 @@
     "plugin_type": "{{ cookiecutter.plugin_type_choice }}",
     "project_name": "Example Plugin",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('.', '').replace('-', '_') }}",
+    "__project_camelcaps": "{{ cookiecutter.project_slug.split('_')|map('capitalize')|join }}",
     "version": "0.1.0",
     "short_description": "This Plugin ...",
     "namespace": "{% if cookiecutter.author_company != '' -%}{{ cookiecutter.author_company.replace('_', '-').replace(' ', '-').strip().split('-')|map('capitalize')|join }}{% else -%}{{ cookiecutter.author.title().replace('_', '-').replace(' ', '-').strip().split('-')|map('capitalize')|join }}{% endif -%}",
