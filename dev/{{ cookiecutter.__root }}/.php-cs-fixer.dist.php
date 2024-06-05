@@ -1,8 +1,11 @@
 <?php
 /**
- * @package    {{cookiecutter.namespace}}.Plugin
+ * @package    {{cookiecutter.namespace}}.{{ cookiecutter.__project_type.title() }}
+ {%- if cookiecutter.__project_type == 'plugin' %}
  * @subpackage {{cookiecutter.plugin_type.title()}}.{{cookiecutter.project_slug.title()}}
- *
+ {%- else %}
+* @subpackage {{cookiecutter.project_slug.title()}}
+ {%- endif %}
  * @copyright  (C) {{cookiecutter.copyright_year}}, {{cookiecutter.author_full}} <{{cookiecutter.author_url}}>, 
  *                 2021 Open Source Matters, Inc. <https://www.joomla.org>
  * @license    GNU General Public License version 2 or later; see LICENSE.txt

@@ -1,6 +1,10 @@
 {
-  "name": "plg_{{cookiecutter.plugin_type}}_{{cookiecutter.project_slug}}",
-  "description": "Joomla plugin {{cookiecutter.project_slug.title()}}",
+{%- if cookiecutter.__project_type == 'plugin' %}
+  "name": "{{ cookiecutter.__extension_prefix }}_{{cookiecutter.plugin_type}}_{{cookiecutter.project_slug}}",
+{%- else %}
+  "name": "{{ cookiecutter.__extension_prefix }}_{{cookiecutter.project_slug}}",
+{%- endif %}
+  "description": "Joomla {{ cookiecutter.__project_type }} {{cookiecutter.project_slug.title()}}",
   "version": "{{cookiecutter.version}}",
   "homepage": "{{cookiecutter.author_url}}",
   "copyright": "(C) {{cookiecutter.copyright_year}}, {{cookiecutter.author_full}} <{{cookiecutter.author_url}}>. All rights reserved.",

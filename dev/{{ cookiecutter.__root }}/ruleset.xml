@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <ruleset name="{{cookiecutter.project_slug.title()}}">
-    <description>The {{cookiecutter.project_slug.title()}} plugin Joomla CMS PSR-12 exceptions.</description>
+    <description>The {{cookiecutter.project_slug.title()}} {{ cookiecutter.__project_type }} Joomla CMS PSR-12 exceptions.</description>
 
     <!-- Exclude folders not containing production code -->
     <exclude-pattern type="relative">^build/*</exclude-pattern>
