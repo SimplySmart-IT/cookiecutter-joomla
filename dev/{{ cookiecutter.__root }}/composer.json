@@ -1,5 +1,5 @@
 {
-    "name": "{{cookiecutter.namespace}}/{{cookiecutter.project_slug}}",
+    "name": "{{cookiecutter.namespace.lower()}}/{{cookiecutter.project_slug.replace('_', '-').lower()}}",
 {%- if cookiecutter.__project_type == 'plugin' %}
     "description": "{{ cookiecutter.__project_type.title() }} - {{cookiecutter.plugin_type.title()}} - {{cookiecutter.project_slug.title()}} for Joomla!",
 {%- else %}

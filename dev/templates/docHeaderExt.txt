@@ -1,0 +1,11 @@
+@package     {{cookiecutter.namespace}}.{{cookiecutter.__project_type.title()}}
+{%- if cookiecutter.__project_type == 'plugin' %}
+@subpackage  {{cookiecutter.plugin_type.title()}}.{{cookiecutter.project_slug}}
+{%- else %}
+@subpackage  mod_{{cookiecutter.project_slug}}
+{%- endif %}
+
+@author      {{cookiecutter.author}} <{{cookiecutter.author_email}}>
+
+@copyright   (C) {{cookiecutter.copyright_year}}, {{cookiecutter.author_full}} <{{cookiecutter.author_url}}>
+@license     GNU General Public License version 3 or later; see LICENSE

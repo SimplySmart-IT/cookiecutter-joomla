@@ -4,21 +4,65 @@
 {%- else %}
   "name": "{{ cookiecutter.__extension_prefix }}_{{cookiecutter.project_slug}}",
 {%- endif %}
-  "description": "Joomla {{ cookiecutter.__project_type }} {{cookiecutter.project_slug.title()}}",
+  "description": "Joomla {{ cookiecutter.__project_type.title() }} {{cookiecutter.project_name}}",
   "version": "{{cookiecutter.version}}",
   "homepage": "{{cookiecutter.author_url}}",
   "copyright": "(C) {{cookiecutter.copyright_year}}, {{cookiecutter.author_full}} <{{cookiecutter.author_url}}>. All rights reserved.",
+  "config": {
+    "build": {
+      "extension": "build/tmp",
+      "media": "build/tmp/media",
+      "annerlink": "{{cookiecutter.author_url}}",
+      "bannercopyright": "(C) {{cookiecutter.copyright_year}}, {{cookiecutter.author_full}} <{{cookiecutter.author_url}}>. All rights reserved."
+    },
+    "dev": {
+{%- if cookiecutter.__project_type == 'plugin' %}
+      "extension": "src/{{ cookiecutter.__project_type }}s/{{cookiecutter.plugin_type}}/{{cookiecutter.project_slug}}",
+{%- elif cookiecutter.__project_type == 'template' %}
+      "extension": "src/{{ cookiecutter.__project_type }}/site/{{cookiecutter.project_slug}}",
+{%- else %}
+      "extension": "src/{{ cookiecutter.__project_type }}s/{{ cookiecutter.__extension_prefix }}_{{cookiecutter.project_slug}}",
+{%- endif %}
+{%- if cookiecutter.__project_type == 'plugin' %}
+      "media": "src/media/{{ cookiecutter.__extension_prefix }}_{{cookiecutter.plugin_type}}_{{cookiecutter.project_slug}}"
+{%- else %}
+      "media": "src/media/{{ cookiecutter.__extension_prefix }}_{{cookiecutter.project_slug}}"
+{%- endif %}
+    }
+  },
   "devDependencies": {
+    "@atao60/fse-cli": "^0.1.9",
+    "autoprefixer": "^10.4.19",
+    "clean-css-cli": "^5.6.3",
+    "esbuild": "^0.21.4",
+    "esbuild-plugin-compress": "^1.0.1",
     "eslint": "^8.51.0",
+    "gzipper": "^7.2.0",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.74.1",
     "stylelint": "^16.1.0",
-    "stylelint-config-standard": "*",
-    "stylelint-config-standard-scss": "*",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-config-twbs-bootstrap": "^14.0.0"
   },
   "scripts": {
     "eslint:check": "eslint --no-error-on-unmatched-pattern --config .eslintrc.js --ext .js ./",
     "eslint:fix": "eslint --no-error-on-unmatched-pattern --fix --config .eslintrc.js --ext .js ./",
     "stylelint:check": "stylelint \"**/*.scss\" --allow-empty-input --formatter verbose",
-    "stylelint:fix": "stylelint \"**/*.scss\" --allow-empty-input --formatter verbose --fix"
+    "stylelint:fix": "stylelint \"**/*.scss\" --allow-empty-input --formatter verbose --fix",
+    "sass:compile": "sass --no-source-map --style=expanded --update ./$npm_package_config_dev_media/scss:./$npm_package_config_build_media/css",
+    "postsass:compile": "fse-cli copy --quiet ./$npm_package_config_dev_media/scss ./$npm_package_config_build_media/scss",
+    "sass:watch": "sass --no-source-map --style=expanded --watch ./$npm_package_config_dev_media/scss:./$npm_package_config_dev_media/css",
+    "css:prefix": "postcss --use autoprefixer -b 'defaults' --no-map --replace ./$npm_package_config_build_media/css/*.css",
+    "css:minify": "cleancss --output ./$npm_package_config_build_media/css/ --batch --batch-suffix \".min\" \"./$npm_package_config_build_media/css/*.css\"",
+    "prejs:minify": "fse-cli emptyDir --quiet ./$npm_package_config_build_media/js && fse-cli copy --keepExisting --quiet ./$npm_package_config_dev_media/js ./$npm_package_config_build_media/js",
+    "js:minify": "esbuild ./$npm_package_config_build_media/js/**/*.js --minify --entry-names=[name].min --allow-overwrite --outdir=./$npm_package_config_build_media/js --analyze --color=true",
+    "compile": "npm run sass:compile && npm run css:prefix && npm run css:minify && npm run js:minify",
+    "banner:css": "esbuild ./$npm_package_config_build_media/css/**/*.css --allow-overwrite --outdir=./$npm_package_config_build_media/css --banner:css=\"/**\n * @package     $npm_package_name  v$npm_package_version\n *\n * @link        $npm_package_config_build_bannerlink\n * @copyright   $npm_package_config_build_bannercopyright\n */\n\"",
+    "banner:js": "esbuild ./$npm_package_config_build_media/js/**/*.js --allow-overwrite --outdir=./$npm_package_config_build_media/js --banner:js=\"// @package     $npm_package_name  v$npm_package_version\n// @link        $npm_package_config_build_bannerlink\n// @copyright   $npm_package_config_build_bannercopyright\n\n\"",
+    "postcompile": "npm run banner:css && npm run banner:js && gzipper compress ./$npm_package_config_build_media --gzip --verbose --remove-larger --include js,css",
+    "prebuild:prod": "npm i && fse-cli emptyDir --quiet ./$npm_package_config_build_extension && composer i && composer header ./src && fse-cli copy --quiet ./$npm_package_config_dev_extension ./$npm_package_config_build_extension",
+    "build:prod": "npm run compile"
   }
 }
