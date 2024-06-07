@@ -26,7 +26,20 @@
 
 ## :bookmark_tabs: About ##
 
-**Under construction**
+Create your [Joomla!](https://www.joomla.org/) projects swiftly with project templates (cookiecutters) and the awesome command-line utility [Cookiecutter](https://www.cookiecutter.io/).
+
+Cookiecutter is a templating library for creating boilerplate for projects in any programming language.
+
+Boilerplate templates are gradually being created here to get your next [Joomla!](https://github.com/joomla/joomla-cms/) 4/5 project up and running as quickly as possible.
+
+Hopefully this project can help to lower the entry barrier for developers who want to start a Joomla! project and are not yet very familiar with the development of plugins, modules and components. 🚀
+
+Of course, even experienced Joomla! developers can certainly benefit from the time savings when setting up their projects.
+
+https://github.com/SimplySmart-IT/cookiecutter-joomla/assets/64533137/8d24a2a6-21f8-4fba-9278-89a29014952b
+
+
+Contributions are welcome!
 
 &#xa0;
 
