@@ -1,7 +1,7 @@
 <?php
 {% include "docHeader.txt" ignore missing %}
 
-namespace {{cookiecutter.namespace}}\Module\{{cookiecutter.__project_camelcaps}}\Dispatcher;
+namespace {{cookiecutter.namespace}}\Module\{{cookiecutter.__project_camelcaps}}\Site\Dispatcher;
 
 use Joomla\CMS\Dispatcher\AbstractModuleDispatcher;
 use Joomla\CMS\Helper\HelperFactoryAwareInterface;
