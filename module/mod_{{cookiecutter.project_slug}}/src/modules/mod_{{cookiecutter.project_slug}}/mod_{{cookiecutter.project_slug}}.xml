@@ -18,11 +18,12 @@
 		<folder>src</folder>
 		<folder>tmpl</folder>
 	</files>
-	<media destination="media/mod_{{cookiecutter.project_slug}}" folder="media">
+	<media destination="mod_{{cookiecutter.project_slug}}" folder="media">
 		<folder>js</folder>
 		<folder>css</folder>
 		<folder>scss</folder>
 		<!-- <folder>images</folder> -->
+		<file>joomla.asset.json</file>
 	</media>
 	<!-- <languages folder="language"> -->
 		<!-- <language tag="en-GB">en-GB/mod_{{cookiecutter.project_slug}}.ini</language> -->
