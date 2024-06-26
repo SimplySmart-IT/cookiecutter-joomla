@@ -1,5 +1,5 @@
 ; {{cookiecutter.namespace}} Module - {{cookiecutter.project_slug.title()}}
-; (C) (C) {{cookiecutter.copyright_year}}, {{cookiecutter.author_full}} <{{cookiecutter.author_url}}>
+; (C) {{cookiecutter.copyright_year}}, {{cookiecutter.author_full}} <{{cookiecutter.author_url}}>
 ; @license    GNU General Public License version 3 or later; see LICENSE
 ; Note : All ini files need to be saved as UTF-8
 
